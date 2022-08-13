@@ -24,8 +24,8 @@ namespace CaixaDespesas
             var movements = ReadMovementsFile(path, filter);
 
             movements = Group(group, movements);
-            PrintMovementsByType(movements, MovementType.Debit);
-            PrintMovementsByType(movements, MovementType.Credit);
+            PrintMovementsByType(movements, MovementType.Debit, group);
+            PrintMovementsByType(movements, MovementType.Credit, group);
         }
 
         static List<Movement> ReadMovementsFile(String path, String[] filter)
@@ -103,15 +103,17 @@ namespace CaixaDespesas
             return true;
         }
 
-        static void PrintMovementsByType(List<Movement> movements, MovementType type)
+        static void PrintMovementsByType(List<Movement> movements, MovementType type, bool group)
         {
+            if(!movements.Any(x => x.Type == type)) return;
+
             Console.ForegroundColor = type == MovementType.Credit ? ConsoleColor.Green : ConsoleColor.Red;
             Console.WriteLine($"\n{(type == MovementType.Credit ? "RECEITAS" : "DESPESAS")}:");
 
             foreach (var movement in movements.Where(x => x.Type == type))
-                Console.WriteLine(movement.ToDetail());
+                Console.WriteLine(movement.ToDetail(!group));
 
-            Console.WriteLine($"TOTAL: {GetTotalByType(movements, type)}");
+            Console.WriteLine($"TOTAL: {GetTotalByType(movements, type)}€");
         }
 
         static decimal GetTotalByType(List<Movement> movements, MovementType type)
