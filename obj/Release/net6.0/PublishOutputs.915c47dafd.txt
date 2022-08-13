@@ -1,5 +1,0 @@
-/Users/rodrigomarinheiro/Development/ConsoleApps/CaixaDespesas/publish/CaixaDespesas
-/Users/rodrigomarinheiro/Development/ConsoleApps/CaixaDespesas/publish/CaixaDespesas.dll
-/Users/rodrigomarinheiro/Development/ConsoleApps/CaixaDespesas/publish/CaixaDespesas.deps.json
-/Users/rodrigomarinheiro/Development/ConsoleApps/CaixaDespesas/publish/CaixaDespesas.runtimeconfig.json
-/Users/rodrigomarinheiro/Development/ConsoleApps/CaixaDespesas/publish/CaixaDespesas.pdb
