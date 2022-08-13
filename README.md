@@ -21,7 +21,7 @@
 Command: dotnet run -- /Users/user/Downloads/caixa.csv LIDL true
 Output: <br/>
 
-DESPESAS:
-COMPRA LIDL AGRADECE - 689.41€
-COMPRAS C DEB LIDL MA - 5.22€
-TOTAL: 694.63€
+DESPESAS:<br/>
+COMPRA LIDL AGRADECE - 689.41€<br/>
+COMPRAS C DEB LIDL MA - 5.22€<br/>
+TOTAL: 694.63€<br/>
