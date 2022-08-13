@@ -12,6 +12,16 @@
 
 # Argumentos
 
-0 [Obrigatório] - Path para o ficheiro
-1 [Opcional] - Filtrar movimentos por descrição. Separar keywords com "|": EX: lidl|inter
-2 [Opcional] - Agrupar por descrição/tipo (credito ou debito). Default: true
+0 [Obrigatório] - Path para o ficheiro<br />
+1 [Opcional] - Filtrar movimentos por descrição. Separar keywords com "|": EX: lidl|inter<br />
+2 [Opcional] - Agrupar por descrição/tipo (credito ou debito). Default: true<br />
+
+# Exemplo
+
+Command: dotnet run -- /Users/user/Downloads/caixa.csv LIDL true
+Output: <br/>
+
+DESPESAS:
+COMPRA LIDL AGRADECE - 689.41€
+COMPRAS C DEB LIDL MA - 5.22€
+TOTAL: 694.63€
